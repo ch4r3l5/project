@@ -103,7 +103,7 @@ def mainmenu(screen):
 
 		if prev_state != state:
 			print state
-			bkg = load_image('bkg.jpg','data/images')
+			bkg = load_image('bkg.png','data/images/snake.png')
 			screen.blit(bkg, (0, 0))
 			pygame.display.flip()
 
@@ -198,7 +198,7 @@ class PyManMain:
 		drawn once"""
 		self.block_sprites.draw(self.background)
 		self.gwall_sprites.draw(self.background)
-		-
+		
 		while 1:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
@@ -314,7 +314,7 @@ class PyManMain:
                 elif layout[y][x]==level1.GHOST3:
                     self.ghost3 = Ghost(centerPoint,img_list[level1.GHOST3])
                 elif layout[y][x]==level1.GHOST4:
-                    self.ghost4 = Ghost(centerPoint,img_list[level1.GHOST4])-
+                    self.ghost4 = Ghost(centerPoint,img_list[level1.GHOST4])
         """Create the Snake group"""
         self.snake_sprites = pygame.sprite.RenderPlain((self.snake))
 	self.ghost_sprites = pygame.sprite.RenderPlain((self.ghost))
